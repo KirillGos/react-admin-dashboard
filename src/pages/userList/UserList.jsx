@@ -4,13 +4,13 @@ import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import { DeleteOutline } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import { userRows } from '../../dummyData.js'
+import { userRows } from "../../dummyData.js";
 
 export default function UserList() {
   const [data, setData] = useState(userRows);
-  
+
   function handleDelete(id) {
-    setData(data.filter(item => item.id !== id));
+    setData(data.filter((item) => item.id !== id));
   }
 
   const columns = [
@@ -41,13 +41,16 @@ export default function UserList() {
             <Link to={"/user/" + params.row.id}>
               <button className="userListEdit">Edit</button>
             </Link>
-            <DeleteOutline className="userListDelete" onClick={() => handleDelete(params.row.id)} />
+            <DeleteOutline
+              className="userListDelete"
+              onClick={() => handleDelete(params.row.id)}
+            />
           </>
         );
       },
     },
   ];
-
+ 
   return (
     <div className="userList">
       <DataGrid
