@@ -6,4 +6,5 @@ export default function NewUser() {
       this is a new user create page
     </div>
   )
+
 }
