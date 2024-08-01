@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-
 import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import { DeleteOutline } from "@mui/icons-material";
